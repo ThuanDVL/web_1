@@ -20,7 +20,7 @@ public class StudentController {
     // ✅ API thêm sinh viên (CHUẨN)
     @PostMapping
     public Student addStudent(@RequestBody Student student) {
-        return service.addStudent(student);
+        return service.addStudent(student   );
     }
 
     // 2. API xóa sinh viên (POST)
@@ -48,7 +48,7 @@ public class StudentController {
     }
 
     // 6. Cập nhật sinh viên (POST)
-    @PostMapping("/update/{id}")
+    @PutMapping("/{id}")
     public Student updateStudent(
             @PathVariable int id,
             @RequestBody Student student) {
